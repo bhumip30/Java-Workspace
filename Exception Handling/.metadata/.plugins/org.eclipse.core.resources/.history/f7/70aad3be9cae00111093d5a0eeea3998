@@ -1,0 +1,12 @@
+package account;
+
+public class BankAccount {
+	private int AccNo;
+	private String AccHolder;
+	private 
+
+	public BankAccount() {
+		
+	}
+
+}

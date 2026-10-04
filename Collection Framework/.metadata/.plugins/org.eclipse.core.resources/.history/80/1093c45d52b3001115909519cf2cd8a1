@@ -1,0 +1,16 @@
+package util;
+
+public class Calculator <T> {
+	T no1;
+	T no2;
+	
+	public Addition(T no1, T no2) {
+		super();
+		this.no1 = no1;
+		this.no2 = no2;
+	}
+	
+	double add() {
+		return no1.doubleValue() + 
+	}
+}

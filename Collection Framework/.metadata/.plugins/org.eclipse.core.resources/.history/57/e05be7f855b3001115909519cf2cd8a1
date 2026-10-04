@@ -1,0 +1,16 @@
+package ArrayClass;
+
+import java.util.Arrays;
+
+public class ArrayCalculations {
+
+	public static void main(String[] args) {
+		int [] arr = {23,43,53,28,76,56,90,65};
+		
+		System.out.println("Original Array: " + Arrays.toString(arr));
+		
+		
+
+	}
+
+}

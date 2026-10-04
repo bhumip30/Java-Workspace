@@ -1,0 +1,10 @@
+package string_map;
+
+public class StringMap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

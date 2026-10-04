@@ -1,0 +1,27 @@
+package student;
+
+import java.io.Serializable;
+
+public class Person implements Serializable  {
+	private String name;
+	protected Date dob;
+	
+	public Person() {
+		super();
+	}
+	public Person(String name, Date dob) {
+		super();
+		this.name = name;
+		this.dob = dob;
+	}
+	@Override
+	public String toString() {
+		return "Person name= " + name + 
+				"dob= " + dob;
+	}
+	
+	public void display() {
+		System.out.println( "Person name= " + name + 
+				"dob= " + dob);
+	}
+}

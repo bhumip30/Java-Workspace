@@ -1,0 +1,6 @@
+Divisors of number: 541 2 3 6 9 18 27 54 
+Divisors of number: 651 5 13 65 
+Divisors of number: 321 2 4 8 16 32 
+Divisors of number: 651 5 13 65 
+Divisors of number: 541 2 3 6 9 18 27 54 
+Divisors of number: 321 2 4 8 16 32 

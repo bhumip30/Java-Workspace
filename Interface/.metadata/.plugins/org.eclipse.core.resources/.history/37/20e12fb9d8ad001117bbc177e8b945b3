@@ -1,0 +1,17 @@
+package calculator_main;
+
+import calculator.SimpleCalculator;
+
+public class cal_main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SimpleCalculator sc = new SimpleCalculator();
+		
+		System.out.println("Addition: " + sc.add(4, 5));
+		System.out.println("Addition: " + sc.substract(56, 53));
+		System.out.println("Addition: " + sc.multiplication(4, 5));
+		System.out.println("Addition: " + sc.division(14, 7));
+	}
+
+}

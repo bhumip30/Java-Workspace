@@ -1,0 +1,5 @@
+package demosynchronization;
+
+public class FileCopyThread extends Thread {
+
+}

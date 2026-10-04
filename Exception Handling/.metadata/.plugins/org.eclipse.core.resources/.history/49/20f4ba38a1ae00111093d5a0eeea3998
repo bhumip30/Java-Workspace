@@ -1,0 +1,28 @@
+package person_name;
+
+public class Person {
+	private String name;
+	private int age;
+	public boolean valid;
+
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Person(String name, int age) throws Exception {
+		super();
+		if (name.length() > 0 && Character.isUpperCase(name.charAt(0)))
+			valid = true;
+		
+		for (int i = 1; i < name.length(); i++) {
+			if (!Character.isLowerCase(name.charAt(i)))
+				valid = false;
+		}
+			
+		this.name = name;
+		this.age = age;
+	}
+	
+	
+
+}

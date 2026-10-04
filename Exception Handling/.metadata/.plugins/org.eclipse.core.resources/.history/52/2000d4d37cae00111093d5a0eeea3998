@@ -1,0 +1,28 @@
+package operations;
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class Date {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			int day, month, year;
+			System.out.println("Enter the day, month, year");
+			day = sc.nextInt();
+			month = sc.nextInt();
+			year = sc.nextInt();
+			
+			LocalDate dob = LocalDate.of(year, month, month);
+			
+			LocalDate today = LocalDate.now();
+			
+			LocalDate validDate = today.minusYears(18);
+			
+			
+		}
+
+	}
+
+}

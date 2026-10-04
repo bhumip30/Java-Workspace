@@ -1,0 +1,11 @@
+package integer_comparator;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class IntegerSorting {
+	TreeSet <Integer> set = new TreeSet<Integer>((a, b)-> b.compareTo(a));
+	
+	
+	
+}

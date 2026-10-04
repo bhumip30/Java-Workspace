@@ -1,0 +1,43 @@
+package emp_set;
+
+//public class Employee implements Comparable<Employee> {
+	public class Employee {
+		
+	private int id;
+	private String name;
+	private float salary;
+	private String dept;
+	
+	public Employee(int id, String name, float salary, String dept) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.dept = dept;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee id = " + id +
+				" \t Employee name = " + name + 
+				"\t Employee salary = " + salary +
+				"\t Employee department = " + dept;
+	}
+
+	//@Override
+	/*public int compareTo(Employee o) {
+		int diff = this.dept.compareTo(o.dept);
+        if (diff != 0) return diff;
+
+        // 2. Within dept, descending order of salary
+        diff = Float.compare(o.salary, this.salary);
+        if (diff != 0) return diff;
+
+        // 3. If salary same, ascending order of name
+        diff = this.name.compareTo(o.name);
+        if (diff != 0) return diff;
+
+        // 4. If name same, ascending order of empid
+        return Integer.compare(this.id, o.id);
+	}*/
+}

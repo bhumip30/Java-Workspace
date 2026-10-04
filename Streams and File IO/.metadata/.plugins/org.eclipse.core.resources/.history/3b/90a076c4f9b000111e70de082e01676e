@@ -1,0 +1,27 @@
+package streams_io;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class line_numbers {
+	 public static void main(String[] args) throws IOException {
+		BufferedReader br = null;
+		br = new BufferedReader(new InputStreamReader (System.in));
+		System.out.println("file name: ");
+		String fname = br.readLine();
+		
+		BufferedReader fr = new BufferedReader(new FileReader(fname));
+		String line;
+		int linecount = 1;
+		
+		while ((line = fr.readLine()) != null) {
+			System.out.println(line);
+			linecount++;
+		}
+		
+		br.close();
+		fr.close();
+	 }
+}

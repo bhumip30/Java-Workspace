@@ -1,0 +1,26 @@
+package ArrayClass;
+
+import java.util.Arrays;
+
+public class ArrayCalculations {
+
+	public static void main(String[] args) {
+		int [] arr = {23,43,53,28,76,56,90,65};
+		
+		System.out.println("Original Array: " + Arrays.toString(arr));
+		
+		System.out.println("Filling the Array: "); 
+		Arrays.fill(arr, 100);
+		
+		System.out.println("Filling the Array to specific index: "); 
+		Arrays.fill(arr,2, 5, 100);
+		
+		System.out.println("Array clone:  "); 
+		int [] arr2 = arr.clone();
+		System.out.println(arr2);
+		
+		
+		
+	}
+
+}

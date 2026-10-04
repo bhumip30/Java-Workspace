@@ -1,0 +1,20 @@
+package app;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.stream.Stream;
+
+public class EmpMain {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		BufferedReader br = new BufferedReader(new FileReader("D:\\CDAC\\Java Workspace\\Stream API\\empcsvdata.txt"));
+		//Stream <String> lines = br.lines();
+		
+		br.lines()
+		.map(line -> line.split(" "))
+		.filter(e -> Integer.parseInt(e[3]) >30000)
+		.forEach(e -> System.out.println("Id" + e[0] + "Name: " + e[1] + "Depatment: " + e[2] + "Salary: " + e[3] + "Location" + e[4]));
+	}
+
+}

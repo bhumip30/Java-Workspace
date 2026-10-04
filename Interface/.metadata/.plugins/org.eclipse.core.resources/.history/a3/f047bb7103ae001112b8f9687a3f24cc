@@ -1,0 +1,26 @@
+package int_operations;
+
+import java.util.Scanner;
+
+import operations.BasicIntOperations;
+public class int_operation_main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number: ");
+		int num = sc.nextInt();
+	
+		
+		MyNumber no = new MyNumber();
+		
+		BasicIntOperations b = no;
+		if (b.isEven(9))
+			System.out.println("Number is even");
+		
+		if (b.isOdd(6))
+			System.out.println("Number is odd");
+
+	}
+
+}

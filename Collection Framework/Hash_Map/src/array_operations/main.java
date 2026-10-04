@@ -1,0 +1,32 @@
+package array_operations;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Stirng: ");
+		String s = sc.next();
+		
+		//show only unique charater in string using hashset and map collection
+		Map <Character, Integer> map = new HashMap<>();
+		for(int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if(map.containsKey(ch)) {
+				map.put(ch, map.get(ch)+1);
+			} else {
+				map.put(ch, 1);
+			}
+		}
+		System.out.println(map);
+		
+		
+		
+		//show only repeted charaters
+		
+	}
+
+}

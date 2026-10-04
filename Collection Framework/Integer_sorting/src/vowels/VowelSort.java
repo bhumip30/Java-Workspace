@@ -1,0 +1,47 @@
+package vowels;
+
+import java.util.Comparator;
+import java.util.TreeSet;
+
+public class VowelSort {
+
+    public static void main(String[] args) {
+        // Custom comparator for sorting logic
+        Comparator<String> vowelComparator = (s1, s2) -> {
+            int v1 = countVowels(s1);
+            int v2 = countVowels(s2);
+
+            // 1. Compare by number of vowels in descending order
+            if (v1 != v2) {
+                return Integer.compare(v2, v1);
+            }
+            // 2. Fallback to alphabetical ascending order if vowel counts match
+            return s1.compareTo(s2);
+        };
+
+        // Initialize TreeSet with the custom comparator
+        TreeSet<String> set = new TreeSet<>(vowelComparator);
+
+        // Add sample strings
+        set.add("apple"); // 2 vowels (a, e)
+        set.add("banana"); // 3 vowels (a, a, a)
+        set.add("cherry"); // 1 vowel (e)
+        set.add("orange"); // 3 vowels (o, a, e)
+        set.add("sky"); // 0 vowels
+
+        // Display the elements
+        System.out.println(set);
+    }
+
+    // Helper method to count vowels in a string
+    private static int countVowels(String str) {
+        int count = 0;
+        String lowerStr = str.toLowerCase();
+        for (char ch : lowerStr.toCharArray()) {
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                count++;
+            }
+        }
+        return count;
+    }
+}

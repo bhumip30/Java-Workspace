@@ -1,0 +1,17 @@
+package student;
+
+public class Course extends Student {
+	private int curid;
+	private String curname;
+	private double fees;
+
+	public Course() {
+		
+	}
+
+	public Course(int id, String name, float percentage, int curid, String curname, double fees ) {
+		super(id, name, percentage);
+		// TODO Auto-generated constructor stub
+		
+	}
+}

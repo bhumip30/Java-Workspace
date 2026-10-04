@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+D:\CDAC\Java Workspace\Miscelleneous\.metadata\.plugins\org.eclipse.jdt.core
+3389104625.index
+958938282.index
+1865797976.index

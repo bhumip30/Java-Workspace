@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+D:\CDAC\Java Workspace\Stream API\.metadata\.plugins\org.eclipse.jdt.core
+411218685.index
+1865797976.index
+2178987511.index
+3003364565.index
+762849487.index
+1122244091.index

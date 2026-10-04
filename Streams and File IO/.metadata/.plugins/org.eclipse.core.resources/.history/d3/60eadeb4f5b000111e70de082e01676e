@@ -1,0 +1,45 @@
+package streams_io;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+
+public class copy_file {
+
+	public static void main(String[] args) {
+		
+		 BufferedReader br = null;
+	     FileReader fr = null;
+	     FileWriter fw = null;
+		
+	     try {
+	    	 br = new BufferedReader(new InputStreamReader(System.in));
+	    	 System.out.print("Enter file source: ");
+	         String source = br.readLine();
+
+	         System.out.print("Enter data to destination: ");
+	         String destination = br.readLine();
+	         
+	         fr = new FileReader(source);
+	         fw = new FileWriter(destination);
+	         
+	         int ch;
+	         while((ch = fr.read()) != -1) {
+	        	 fw.write(ch);
+	         }
+	         fr.close();
+	         fw.close();
+	         
+	         System.out.print("file coped successfully");
+	     }
+	     
+	     catch (IOException e) {
+	            e.printStackTrace();
+
+	     }
+	}
+
+}

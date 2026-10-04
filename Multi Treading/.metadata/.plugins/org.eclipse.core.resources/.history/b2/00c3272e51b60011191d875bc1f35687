@@ -1,0 +1,11 @@
+package fileDemo;
+
+public class DisplayFilesApp {
+
+	public static void main(String[] args) {
+		DisplayFileData df1 = new DisplayFileData("D:\\CDAC\\Myfiles\\student.txt");
+		DisplayFileData df2 = new DisplayFileData("D:\\CDAC\\Myfiles\\emp.txt");
+		DisplayFileData df3 = new DisplayFileData("D:\\CDAC\\Myfiles\\source.txt");
+	}
+
+}

@@ -1,0 +1,29 @@
+package custome;
+
+public class App {
+
+	public static void main(String[] args) {
+		Order order = new Order(23,"Bakul");
+		System.out.println(order);
+		
+		order.changeStatus(OrderStatus.CONFIRMED);
+		System.out.println(order);
+		
+		OrderStatus status1 = OrderStatus.DELIVERED;
+		OrderStatus status2 = OrderStatus.DELIVERED;
+		System.out.println(status1 == status2);  //
+		System.out.println(status1.equals(status2));
+		
+		OrderStatus [] vals = OrderStatus.values();
+		for(OrderStatus v : vals)
+			System.out.println(v);
+		
+		int index = status1.ordinal();
+		System.out.println("DELIVERED : "+index );
+		
+		OrderStatus status = OrderStatus.valueOf("SHIPPED");
+		order.changeStatus(status);
+		System.out.println(order);
+	}
+
+}

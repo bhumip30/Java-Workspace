@@ -1,0 +1,51 @@
+package multithreading_communication;
+
+public class Stocks {
+	private int qtyProduced;
+	private int qtyConsume;
+	private volatile boolean bProduced;
+	
+	public Stocks() {
+		super();
+	}
+	
+	public synchronized void produce() {
+		if(bProduced) {
+			try {
+				this.wait();
+			}
+			catch(InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		qtyProduced ++;
+		System.out.println("Produced: " + qtyProduced);
+		bProduced = true;
+		notify();  //to customer - producer ended is task
+	}
+	
+	public synchronized void comsume() {
+		if(bProduced) {
+			try {
+				this.wait();
+			}
+			catch(InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		qtyConsume ++;
+		System.out.println("Produced: " + qtyConsume);
+		bProduced = false;
+		notify();  //to customer - producer ended is task
+	}
+
+	public int getQtyProduced() {
+		return qtyProduced;
+	}
+
+	public int getQtyConsume() {
+		return qtyConsume;
+	}
+	
+	
+}

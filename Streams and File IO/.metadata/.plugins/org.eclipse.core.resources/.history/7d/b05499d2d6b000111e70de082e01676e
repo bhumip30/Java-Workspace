@@ -1,0 +1,10 @@
+package streams_io;
+
+public class File_read_write {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

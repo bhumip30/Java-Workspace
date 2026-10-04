@@ -1,0 +1,44 @@
+package customer_collection_main;
+
+import java.io.FileInputStream;
+import java.io.EOFException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import customer_collection.Customer;
+import customer_collection.RegisteredCustomer;
+
+public class ReadCustomer {
+
+    public static void main(String[] args) throws Exception {
+        List<Customer> customers = new ArrayList<>();
+        List<RegisteredCustomer> regcustomer = new ArrayList<>();
+
+        try (FileInputStream fis = new FileInputStream("customer.txt");
+             ObjectInputStream ois = new ObjectInputStream(fis)) {
+
+            while (true) {
+                try {
+                    Customer c = (Customer) ois.readObject();
+                    if (c instanceof RegisteredCustomer)
+                        regcustomer.add((RegisteredCustomer) c);
+                    else
+                        customers.add(c);
+                } catch (EOFException e) {
+                    break; 
+                }
+            }
+        }
+
+        System.out.println("Customer list: ");
+        for (Customer c : customers) {
+            System.out.println(c); 
+        }
+
+        System.out.println("Registered Customer list: ");
+        for (RegisteredCustomer rc : regcustomer) {
+            System.out.println(rc); 
+        }
+    }
+}

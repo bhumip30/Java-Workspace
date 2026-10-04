@@ -1,0 +1,31 @@
+package int_operations;
+
+import operations.AdvIntOperations;
+import operations.BasicIntOperations;
+
+public class MyNumber implements BasicIntOperations, AdvIntOperations {
+	@Override
+	public boolean isOdd(int num) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isEven(int num) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	@Override
+	public boolean isPrime(int num) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public double calFactorial(int num) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,40 @@
+package customer_collection;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.util.Scanner;
+
+public class CustomerMain {
+
+	public static void main(String[] args) throws Exception {
+		Scanner sc = new Scanner(System.in);
+		
+		FileOutputStream fos = new FileOutputStream("customer.txt");
+		
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		
+		for(int i = 1; i <= 5; i++) {
+			System.out.println("Enter customer: " + i);
+			
+			System.out.println("Enter customer name: ");
+			String name = sc.next();
+			
+			System.out.println("Enter email: ");
+			String email = sc.next();
+			
+			System.out.println("Enter contact: ");
+			int contact = sc.nextInt();
+			
+			System.out.println("Enter register number: ");
+			int regno = sc.nextInt();
+			RegisteredCustomer rc = new  RegisteredCustomer(name, email, contact, regno);
+			
+			oos.writeObject(rc);
+		}
+		oos.close();
+		fos.close();
+	
+	}
+
+}

@@ -1,0 +1,49 @@
+package streams_io;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class File_read_write {
+
+	public static void main(String[] args) {
+		BufferedReader br = null;
+		FileReader fr = null; 
+		FileWriter fw = null;
+		
+		try {
+			String fname;
+			String data;
+			
+			br = new BufferedReader(new InputStreamReader (System.in));
+			fr = new FileReader(fname);
+			fw = new FileWriter(fname);
+			
+			//Writing data in file
+			fw.write(data);
+			fw.close();
+			
+			BufferedReader fbr = new BufferedReader(fr);
+			
+			System.out.println("Data from file: ");
+			
+			String line;
+			while ((line = fbr.readLine()) != null) {
+				System.out.println(line);
+			}
+			
+		}
+		catch(FileNotFoundException e) {
+			e.printStackTrace();
+			
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

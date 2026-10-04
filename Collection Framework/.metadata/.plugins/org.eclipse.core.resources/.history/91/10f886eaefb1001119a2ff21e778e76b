@@ -1,0 +1,50 @@
+package customer_collection_main;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import customer_collection.Customer;
+import customer_collection.RegisteredCustomer;
+
+public class ReadCustomer {
+
+	public static void main(String[] args) throws Exception {
+		List<Customer> customers = new ArrayList<Customer>();
+		
+		List<RegisteredCustomer> regcustomer = new ArrayList<RegisteredCustomer>();
+		
+		FileInputStream fis = new FileInputStream("customer.txt");
+		
+		ObjectInputStream ois = new ObjectInputStream(fis);
+		
+		try {
+			while(true) {
+				Customer c = (Customer) ois.readObject();
+				if(c instanceof RegisteredCustomer)
+					regcustomer.add((RegisteredCustomer)c);
+				else
+					customers.add(c);
+			}
+		}
+		catch(Exception e) {
+			
+		}
+		ois.close();
+		fis.close();
+		
+		System.out.println("Customer list: ");
+		for(Customer c : customers) {
+			c.display();
+		}
+		
+		System.out.println("Registered Customer list: ");
+		for(RegisteredCustomer rc : regcustomer ) {
+			rc.display();
+		}
+		
+	}
+
+}

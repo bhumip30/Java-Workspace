@@ -1,0 +1,58 @@
+package student_set;
+
+import java.util.Objects;
+
+public class Student {
+	private int id;
+	private String name, city;
+	private double percentage;
+	
+	public Student(int id, String name, String city, double percentage) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.city = city;
+		this.percentage = percentage;
+	}
+
+	@Override
+	public String toString() {
+		return "Student id=" + id +
+				"name= " + name + 
+				"city=" + city + 
+				"percentage=" + percentage;
+	}
+
+	@Override
+	public int hashCode() {
+		int code = 0;
+		if (percentage > 90)
+			code = 10;
+		else if(percentage > 70 && percentage < 90)
+			code = 20;
+		else if(percentage > 50 && percentage < 70)
+			code = 30;
+		else if(percentage > 50)
+			code = 40;
+		else
+			code = 50;
+		return code;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student other = (Student) obj;
+		return Objects.equals(city, other.city) && id == other.id && Objects.equals(name, other.name)
+				&& Double.doubleToLongBits(percentage) == Double.doubleToLongBits(other.percentage);
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,20 @@
+package operations;
+import java.time.LocalDate;
+import java.util.Scanner;
+
+import com.sun.tools.jdeprscan.scan.Scan;
+
+public class Date {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			System.out.println("Enter the day, month, year");
+			int day = new Scan.nextInt();
+			
+		}
+
+	}
+
+}

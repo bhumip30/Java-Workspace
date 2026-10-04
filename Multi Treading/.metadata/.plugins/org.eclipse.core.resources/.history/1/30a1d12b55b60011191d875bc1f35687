@@ -1,0 +1,42 @@
+package numbers;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Divisors implements Runnable {
+	private Thread t;
+	private int num;
+
+	public Divisors(int num) {
+		super();
+		this.num = num;
+		this.t = new Thread(this);
+	}
+
+	@Override
+	public void run() {
+		synchronized(Divisors.class) {
+		try {
+			
+			FileWriter fw = new FileWriter("Divisors.txt", true);
+			fw.write("Divisors of number: " + num);
+			for(int i = 1; i <= num; i++) {
+				if(num % i == 0)
+					fw.write(i + " ");
+			}
+			fw.write("\n");
+			fw.close();
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+		}		
+	}
+
+	public void setT(Thread t) {
+		this.t = t;
+	}
+	
+	
+
+}

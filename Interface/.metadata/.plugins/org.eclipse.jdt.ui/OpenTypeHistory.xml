@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=Calculator/src&lt;custom{calculator.java[calculator" modifiers="513" timestamp="1789126348732"/>
+    <typeInfo handle="=Calculator/src&lt;custom{iScientificCalculator.java[iScientificCalculator" modifiers="513" timestamp="1789127381919"/>
+    <typeInfo handle="=Int_operations/C:\/Program Files\/Java\/jdk-25.0.4.1\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/module=/true=/&lt;sun.nio.fs(BasicFileAttributesHolder.class[BasicFileAttributesHolder" modifiers="1537" timestamp="1788589397966"/>
+    <typeInfo handle="=Int_operations/src&lt;operations{BasicIntOperations.java[BasicIntOperations" modifiers="513" timestamp="1789128808733"/>
+    <typeInfo handle="=Int_operations/src&lt;operations{AdvIntOperations.java[AdvIntOperations" modifiers="513" timestamp="1789128916898"/>
+    <typeInfo handle="=Int_operations/C:\/Program Files\/Java\/jdk-25.0.4.1\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/module=/true=/&lt;java.lang.foreign(AddressLayout.class[AddressLayout" modifiers="268436993" timestamp="1788589397966"/>
+    <typeInfo handle="=Int_operations/C:\/Program Files\/Java\/jdk-25.0.4.1\/lib\/jrt-fs.jar`jdk.hotspot.agent=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/module=/true=/&lt;sun.jvm.hotspot.types(AddressField.class[AddressField" modifiers="1537" timestamp="1788589397966"/>
+</typeInfoHistroy>

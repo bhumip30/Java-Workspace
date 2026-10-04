@@ -1,0 +1,22 @@
+package array_operations;
+
+public class ArrayOperation <T> {
+
+	public boolean search(T [] arr, T key) {
+		boolean flag = false;
+		for(T n : arr) {
+			if (n.equals(key))
+				flag = true;
+		}
+		return flag;
+	}
+	
+	public void print(T [] arr, T key) {
+		for(T n : arr) {
+			System.out.println("Array is: " + n);
+		}
+	}
+
+	
+
+}

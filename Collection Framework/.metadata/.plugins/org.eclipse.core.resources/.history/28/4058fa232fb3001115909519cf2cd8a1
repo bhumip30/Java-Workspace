@@ -1,0 +1,12 @@
+package generic_class;
+
+public class MyClassMain {
+
+	public static void main(String[] args) {
+		MyClass <String> obj = new MyClass<>();
+		obj.setValue("Aarya");
+		System.out.println(obj.getValue());
+
+	}
+
+}

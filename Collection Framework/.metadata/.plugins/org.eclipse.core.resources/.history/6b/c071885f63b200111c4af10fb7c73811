@@ -1,0 +1,32 @@
+package emp_set;
+
+public class Employee implements Comparable<Employee> {
+	private int id;
+	private String name;
+	private float salary;
+	private String dept;
+	
+	public Employee(int id, String name, float salary, String dept) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.dept = dept;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee id = " + id +
+				" Employee name = " + name + 
+				"Employee salary = " + salary +
+				"Employee department = " + dept;
+	}
+
+	@Override
+	public int compareTo(Employee o) {
+		int diff = 0;
+		diff = (int)(this.salary - o.salary);
+		return diff;
+	}
+	
+}

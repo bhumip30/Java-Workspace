@@ -1,0 +1,42 @@
+package streams_io;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Acc_Char {
+
+	public static void main(String[] args) {
+		BufferedReader br = null;
+		try {
+			br = new BufferedReader (new InputStreamReader(System.in));
+			System.out.println("Enter the q for the quit");
+			
+			int i;
+			int digitcount = 0;
+			int alphabatecount = 0;
+			while((i = br.read())!= 'q') {
+				System.out.println((char)i);
+				if(Character.isLetter(i))
+					alphabatecount ++;
+				if (Character.isDigit(i))
+					digitcount ++;
+			}
+			System.out.println("alphabate count: "+ alphabatecount);
+			System.out.println("digit count: "+ digitcount);
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+			br.close();
+			}
+			catch(IOException e){
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+}

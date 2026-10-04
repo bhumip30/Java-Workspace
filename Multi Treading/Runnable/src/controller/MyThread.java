@@ -1,0 +1,27 @@
+package controller;
+
+public class MyThread implements Runnable{
+	private Thread t;
+	
+	public MyThread() {
+		t = new Thread(this);
+	}
+	
+	public Thread getT() {
+		return t;
+	}
+
+	@Override
+	public void run() {
+		for(int i = 1; i<=5; i++) {
+			System.out.println("Child thread : "+i);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}	
+		
+	}
+	
+}

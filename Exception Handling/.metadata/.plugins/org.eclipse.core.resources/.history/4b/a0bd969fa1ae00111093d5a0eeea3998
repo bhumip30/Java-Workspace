@@ -1,0 +1,21 @@
+package person_name;
+
+public class person_main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+
+            Person p = new Person("aarya", 22);
+
+            p.display();
+
+        }
+        catch (Exception e) {
+
+            System.out.println(e.getMessage());
+        }
+
+	}
+
+}

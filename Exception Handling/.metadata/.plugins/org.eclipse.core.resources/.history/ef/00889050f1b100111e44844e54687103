@@ -1,0 +1,48 @@
+package operations;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Scanner;
+
+// Custom exception
+class UnderAgeException extends Exception {
+    public UnderAgeException(String message) {
+        super(message);
+    }
+}
+
+public class AgeValidationApp {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter day: ");
+            int day = sc.nextInt();
+
+            System.out.print("Enter month: ");
+            int month = sc.nextInt();
+
+            System.out.print("Enter year: ");
+            int year = sc.nextInt();
+
+            // Create LocalDate instance
+            LocalDate inputDate = LocalDate.of(year, month, day);
+            LocalDate currentDate = LocalDate.now();
+
+            // Calculate difference
+            Period diff = Period.between(inputDate, currentDate);
+
+            if (diff.getYears() >= 18) {
+                System.out.println("Valid: Age is " + diff.getYears() + " years.");
+            } else {
+                throw new UnderAgeException("Invalid: Age is less than 18 years.");
+            }
+        } catch (UnderAgeException e) {
+            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            sc.close();
+        }
+    }
+}
+

@@ -1,0 +1,41 @@
+package student_set;
+
+import java.util.Objects;
+
+public class Student {
+    private int id;
+    private String name;
+    private String city;
+    private double percentage;
+
+    public Student(int id, String name, String city, double percentage) {
+        this.id = id;
+        this.name = name;
+        this.city = city;
+        this.percentage = percentage;
+    }
+
+    @Override
+    public String toString() {
+        return "Student [id=" + id +
+               ", name=" + name +
+               ", city=" + city +
+               ", percentage=" + percentage + "]";
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, city);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;             
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        Student s = (Student) obj;
+        return this.id == s.id &&
+               Objects.equals(this.name, s.name) &&
+               Objects.equals(this.city, s.city);
+    }
+}
